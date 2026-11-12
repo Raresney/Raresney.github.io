@@ -1,0 +1,14 @@
+[
+  {
+    "title": "VulnScanner",
+    "description": "Vulnerability scanner for web targets. Placeholder text: edit me in data/projects.json.",
+    "tags": ["security", "python"],
+    "url": "https://github.com/Raresney"
+  },
+  {
+    "title": "DeepfakeDetector",
+    "description": "Biometric and neural deepfake detection pipeline. Placeholder text: edit me in data/projects.json.",
+    "tags": ["ml", "biometrics", "python"],
+    "url": "https://github.com/Raresney"
+  }
+]

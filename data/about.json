@@ -1,0 +1,10 @@
+{
+  "name": "Rares",
+  "tagline": "Cybersecurity and software, building things that break things.",
+  "bio": "Placeholder bio: edit me in data/about.json.",
+  "skills": ["Python", "Security research", "Linux", "Docker", "JavaScript"],
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/Raresney" }
+  ],
+  "email": "you@example.com"
+}
