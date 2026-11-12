@@ -1,0 +1,21 @@
+#desktop .window {
+  position: absolute; display: flex; flex-direction: column; overflow: hidden;
+  background: var(--glass); border: 1px solid var(--glass-border); border-radius: 12px;
+  backdrop-filter: blur(18px) saturate(140%); -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  animation: win-open .22s cubic-bezier(.2,.9,.3,1.2);
+  transition: transform .25s ease, opacity .25s ease;
+}
+@keyframes win-open { from { opacity: 0; transform: scale(.92); } to { opacity: 1; transform: none; } }
+.window.minimized { transform: translateY(60vh) scale(.2); opacity: 0; pointer-events: none; visibility: hidden; transition: transform .25s ease, opacity .25s ease, visibility 0s .25s; }
+.window.maximized { inset: 36px 0 76px 0 !important; width: auto !important; height: auto !important; border-radius: 0; }
+.titlebar { display: flex; align-items: center; justify-content: space-between; padding: .5rem .75rem; cursor: grab; user-select: none; border-bottom: 1px solid var(--glass-border); font-size: .85rem; color: var(--muted); }
+.wbtns { display: flex; gap: .4rem; }
+.wbtns button { width: 14px; height: 14px; border-radius: 50%; border: 0; padding: 0; cursor: pointer; }
+.wbtns .min { background: #ffbd2e; } .wbtns .max { background: #28c840; } .wbtns .close { background: #ff5f57; }
+.window .content { flex: 1; overflow: auto; padding: 1rem; }
+.resize { position: absolute; right: 0; bottom: 0; width: 16px; height: 16px; cursor: nwse-resize; }
+@media (max-width: 700px) {
+  #desktop .window { inset: 36px 0 76px 0 !important; width: auto !important; height: auto !important; border-radius: 0; }
+  .resize { display: none; }
+}
