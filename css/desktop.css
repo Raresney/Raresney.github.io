@@ -1,0 +1,35 @@
+#desktop { position: fixed; inset: 0; overflow: hidden; }
+.bg {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 40px 40px,
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 40px 40px,
+    linear-gradient(120deg, #070b14, #0d1f3a, #0a1a2a, #070b14);
+  background-size: 40px 40px, 40px 40px, 300% 300%;
+  animation: drift 24s ease-in-out infinite;
+}
+@keyframes drift { 0%,100% { background-position: 0 0, 0 0, 0% 50%; } 50% { background-position: 0 0, 0 0, 100% 50%; } }
+.topbar { position: absolute; top: 0; left: 0; right: 0; height: 36px; z-index: 5000; display: flex; align-items: center; gap: 1rem; padding: 0 1rem; background: rgba(7,11,20,.6); backdrop-filter: blur(10px); border-bottom: 1px solid var(--glass-border); font-size: .85rem; }
+.topbar .owner { font-weight: 600; }
+.topbar .status { color: var(--accent); margin-right: auto; font-family: var(--font-mono); font-size: .75rem; }
+.topbar .clock { font-family: var(--font-mono); color: var(--muted); }
+.icons { position: absolute; top: 56px; left: 16px; display: grid; gap: 1rem; z-index: 1; }
+.desk-icon { width: 84px; text-align: center; cursor: pointer; padding: .5rem; border-radius: 10px; }
+.desk-icon:hover { background: rgba(255,255,255,.07); }
+.desk-icon .glyph { display: block; font-size: 2rem; line-height: 1.4; }
+.desk-icon .label { font-size: .75rem; color: var(--muted); }
+.windows { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.windows > .window { pointer-events: auto; }
+.dock { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); z-index: 5000; display: flex; gap: .6rem; padding: .5rem .75rem; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 18px; backdrop-filter: blur(16px); }
+.dock button { width: 48px; height: 48px; font-size: 1.4rem; border: 0; border-radius: 12px; background: rgba(255,255,255,.08); color: var(--text); cursor: pointer; transition: transform .15s ease, box-shadow .15s ease; }
+.dock button:hover { transform: translateY(-8px) scale(1.25); box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 55%, transparent); }
+.boot { position: absolute; inset: 0; z-index: 9999; background: #000; color: var(--accent); font-family: var(--font-mono); display: grid; place-items: center; animation: fade-out .5s 2s forwards; }
+@keyframes fade-out { to { opacity: 0; } }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+.card { padding: 1rem; border: 1px solid var(--glass-border); border-radius: 12px; background: rgba(255,255,255,.04); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.card:hover { transform: perspective(600px) rotateX(2deg) rotateY(-2deg) translateY(-3px); border-color: var(--accent); box-shadow: 0 0 22px color-mix(in srgb, var(--accent) 35%, transparent); }
+.card h3 { margin: 0 0 .5rem; } .card p { color: var(--muted); font-size: .9rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0; }
+.chip { font-family: var(--font-mono); font-size: .7rem; padding: .15rem .5rem; border: 1px solid var(--glass-border); border-radius: 999px; color: var(--accent); }
+a { color: var(--accent); }
+@media (max-width: 700px) { .icons { grid-template-columns: repeat(3, 1fr); right: 16px; } }
