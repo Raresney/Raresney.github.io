@@ -35,6 +35,11 @@ describe('windowManager', () => {
     expect(a.classList.contains('minimized')).toBe(false);
     expect(+a.style.zIndex).toBeGreaterThan(+b.style.zIndex);
   });
+  it('first window does not cover the desktop icon column', () => {
+    createWindowManager({ root, bus, apps: apps() });
+    bus.emit('open', 'about');
+    expect(parseFloat(root.querySelector('.window').style.left)).toBeGreaterThanOrEqual(120);
+  });
   it('toggle opens, minimizes then restores', () => {
     const wm = createWindowManager({ root, bus, apps: apps() });
     wm.toggle('about'); const a = root.querySelector('[data-app=about]');

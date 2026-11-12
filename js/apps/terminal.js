@@ -85,8 +85,13 @@ export const terminalApp = {
     const typed = canType();
     const print = (lines) => renderLines(output, lines, { typed });
 
-    print(["welcome. type 'help' to see commands."]);
+    print([
+      'Bighiu Rares (Raresney) - Cyber Security Analyst (CSIRT) | Security Researcher',
+      "type 'help' for commands, or try: projects, about, blog.",
+    ]);
     el.addEventListener('click', () => input.focus());
+    const touch = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+    if (!touch) input.focus();
 
     input.addEventListener('keydown', async (e) => {
       if (e.key === 'Enter') {

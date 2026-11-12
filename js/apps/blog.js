@@ -23,6 +23,10 @@ export const blogApp = {
 
     const showList = () => {
       el.textContent = '';
+      if (!index.length) {
+        el.append(h('p', 'empty', 'No posts yet. Check back soon.'));
+        return;
+      }
       for (const p of index) {
         const b = h('button', 'post-link'); b.type = 'button';
         b.append(h('strong', null, p.title), h('span', 'date', ' ' + p.date), h('p', null, p.summary));

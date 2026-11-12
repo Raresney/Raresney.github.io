@@ -48,4 +48,10 @@ describe('blog', () => {
     await tick();
     expect(el.querySelector('.app-error')).not.toBeNull();
   });
+  it('empty index shows friendly message, not an error', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => ({ ok: true, json: async () => [] })));
+    await blogApp.mount(el, {});
+    expect(el.querySelector('.app-error')).toBeNull();
+    expect(el.textContent).toMatch(/no posts yet/i);
+  });
 });

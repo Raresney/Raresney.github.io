@@ -9,7 +9,7 @@ import { blogApp } from './apps/blog.js';
 const apps = [terminalApp, projectsApp, aboutApp, blogApp];
 const knownIds = apps.map((a) => a.id);
 
-mountShell({ root: document.getElementById('desktop'), apps, bus, owner: 'Rares', boot: true });
+mountShell({ root: document.getElementById('desktop'), apps, bus, owner: 'Raresney', boot: true });
 initRouter({ bus, knownIds });
 
 bus.emit('open', parseHash(location.hash, knownIds) ?? 'terminal');

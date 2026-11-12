@@ -33,3 +33,9 @@
 .chip { font-family: var(--font-mono); font-size: .7rem; padding: .15rem .5rem; border: 1px solid var(--glass-border); border-radius: 999px; color: var(--accent); }
 a { color: var(--accent); }
 @media (max-width: 700px) { .icons { grid-template-columns: repeat(3, 1fr); right: 16px; } }
+
+.links { list-style: none; padding: 0; margin: 1rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.links a { display: inline-block; padding: .4rem .9rem; border: 1px solid var(--glass-border); border-radius: 999px; text-decoration: none; font-size: .9rem; transition: border-color .2s ease, box-shadow .2s ease; }
+.links a:hover { border-color: var(--accent); box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 35%, transparent); }
+.tagline { color: var(--muted); }
+.empty { color: var(--muted); }

@@ -74,7 +74,8 @@ export function createWindowManager({ root, bus, apps }) {
     const handle = document.createElement('div'); handle.className = 'resize';
     el.append(bar, content, handle);
     const offset = (cascade++ % 6) * 28;
-    applyRect(el, { x: 80 + offset, y: 70 + offset, w: 620, h: 420 });
+    // start right of the desktop icon column (icons occupy x < ~120)
+    applyRect(el, { x: 140 + offset, y: 60 + offset, w: Math.min(620, vp().w - 180), h: 420 });
     el.addEventListener('pointerdown', () => api.focus(app.id));
     drag(el, bar, 'move'); drag(el, handle, 'resize');
     root.append(el);
