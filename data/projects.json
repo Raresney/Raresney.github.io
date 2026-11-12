@@ -1,14 +1,56 @@
 [
   {
-    "title": "VulnScanner",
-    "description": "Vulnerability scanner for web targets. Placeholder text: edit me in data/projects.json.",
-    "tags": ["security", "python"],
-    "url": "https://github.com/Raresney"
+    "title": "ShotShield",
+    "description": "On-device tool that detects and redacts sensitive data (API keys, IBANs, cards, national IDs, emails) in screenshots before you share them. Nothing leaves your machine.",
+    "tags": ["typescript", "tauri", "ocr", "privacy"],
+    "url": "https://github.com/Raresney/ShotShield"
   },
   {
-    "title": "DeepfakeDetector",
-    "description": "Biometric and neural deepfake detection pipeline. Placeholder text: edit me in data/projects.json.",
-    "tags": ["ml", "biometrics", "python"],
-    "url": "https://github.com/Raresney"
+    "title": "HuntKit",
+    "description": "Local bug bounty recon and methodology copilot. Orchestrates the Kali toolchain, organises findings per program and suggests where to dig next.",
+    "tags": ["python", "bug-bounty", "recon"],
+    "url": "https://github.com/Raresney/HuntKit"
+  },
+  {
+    "title": "PacketHighway",
+    "description": "Real-time 3D network traffic visualization. Every packet becomes a vehicle on a cinematic cyber-city highway.",
+    "tags": ["python", "scapy", "react-three-fiber"],
+    "url": "https://github.com/Raresney/PacketHighway"
+  },
+  {
+    "title": "AI-Security-Research",
+    "description": "Offensive and defensive tools for testing LLM robustness, detecting prompt injection, analyzing network recon and classifying phishing.",
+    "tags": ["python", "llm-security", "ml"],
+    "url": "https://github.com/Raresney/AI-Security-Research"
+  },
+  {
+    "title": "bugbounty-lab",
+    "description": "Web-security training labs (IDOR, Broken Access Control, XSS, CSRF) plus bug-bounty writeups. Labs are intentionally vulnerable: run locally only.",
+    "tags": ["javascript", "web-security", "labs"],
+    "url": "https://github.com/Raresney/bugbounty-lab"
+  },
+  {
+    "title": "Cybersecurity-portfolio",
+    "description": "Hands-on projects, labs and notes on ethical hacking, threat analysis, honeypots, malware analysis and network security.",
+    "tags": ["python", "bash", "scapy", "nmap"],
+    "url": "https://github.com/Raresney/Cybersecurity-portfolio"
+  },
+  {
+    "title": "llm-math-solver",
+    "description": "AI assistant that solves complex math problems with open-source LLMs from Hugging Face, using RAG over a math knowledge base to improve accuracy.",
+    "tags": ["python", "llm", "rag"],
+    "url": "https://github.com/Raresney/llm-math-solver"
+  },
+  {
+    "title": "fastAPI_projects",
+    "description": "Collection of FastAPI backend projects focused on AI and cybersecurity applications.",
+    "tags": ["python", "fastapi", "backend"],
+    "url": "https://github.com/Raresney/fastAPI_projects"
+  },
+  {
+    "title": "Cyber-lab",
+    "description": "Hands-on cybersecurity lab: Python tools, network analysis, security experiments and penetration testing practice.",
+    "tags": ["python", "networking", "pentest"],
+    "url": "https://github.com/Raresney/Cyber-lab"
   }
 ]
