@@ -1,10 +1,12 @@
 {
-  "name": "Rares",
-  "tagline": "Cybersecurity and software, building things that break things.",
-  "bio": "Placeholder bio: edit me in data/about.json.",
-  "skills": ["Python", "Security research", "Linux", "Docker", "JavaScript"],
+  "name": "Bighiu Rares (Raresney)",
+  "tagline": "Cyber Security Analyst (CSIRT) | Security Researcher",
+  "bio": "Based in Romania. I work in incident response and research security: bug bounty recon, network analysis, and the robustness of LLMs. Below are the tools and labs I build along the way.",
+  "skills": ["Incident response", "Bug bounty", "Network analysis", "LLM security", "Python", "Linux"],
   "links": [
-    { "label": "GitHub", "url": "https://github.com/Raresney" }
+    { "label": "GitHub", "url": "https://github.com/Raresney" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/rares-bighiu" },
+    { "label": "GitLab", "url": "https://gitlab.com/Raresney" }
   ],
-  "email": "you@example.com"
+  "email": "bighiurares05@gmail.com"
 }
